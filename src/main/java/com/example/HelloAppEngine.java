@@ -1,11 +1,12 @@
 package com.example;
 
-import java.io.IOException;
-
+import java.io.*;
+import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 
 import com.example.PhraseOMatic_Mark4;
 
@@ -17,15 +18,25 @@ public class HelloAppEngine extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response)
-      throws IOException {
-
-    response.setContentType("text/plain");
+      throws ServletException, IOException {
+	PrintWriter out;
+	String title = "His master's voice...";
+	response.setContentType("text/html");
     response.setCharacterEncoding("UTF-8");
-
-    response.getWriter().print("His master's voice!\r\n");
-    response.getWriter().print("\r\n");
-    response.getWriter().print("\r\n");
-    response.getWriter().print("  SPEAK:  " + PhraseOMatic_Mark4.makePhrase() );
+	out = response.getWriter();
+	
+	String cssTag="<link rel='stylesheet' type='text/css' href='/css/style.css'>";	
+	
+	out.println("<html>");
+	out.println("<head><title>");
+	out.println("PhraseOmatic");
+	out.println("</title>"+cssTag+"</head>");
+	out.println("<body><div align=\"center\">" );
+	out.println("<h1>" + title + "</h1><br>");
+	out.println("<h2>" + PhraseOMatic_Mark4.makePhrase() + "</h2><br><br>");
+	out.println("<h4><a href=\"hello\">speak</a></h4>");
+	out.println("</div></body>");
+	out.println("</html>");
 
   }
 }

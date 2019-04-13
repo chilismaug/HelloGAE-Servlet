@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 
 public class PhraseOMatic_Mark4 {
-   public static String makePhrase() throws FileNotFoundException {
+   public static String getPhrase() throws FileNotFoundException {
 
      // make three sets of words to choose from
         String[] wordListOne = {"skin-deep", "24/7",  "pervasive" ,"occasionally available", "globally-scraped", "hybrid", "fructitious"};

@@ -33,7 +33,7 @@ public class HelloAppEngine extends HttpServlet {
 	out.println("</title>"+cssTag+"</head>");
 	out.println("<body><div align=\"center\">" );
 	out.println("<h1>" + title + "</h1><br>");
-	out.println("<h2>" + PhraseOMatic_Mark4.makePhrase() + "</h2><br><br>");
+	out.println("<h2>" + PhraseOMatic_Mark4.getPhrase() + "</h2><br><br>");
 	out.println("<h4><a href=\"hello\">speak</a></h4>");
 	out.println("</div></body>");
 	out.println("</html>");

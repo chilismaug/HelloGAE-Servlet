@@ -16,16 +16,30 @@ import java.util.stream.Collectors;
 public class PhraseOMatic_Mark4 {
    public static String getPhrase() throws FileNotFoundException {
 
-     // make three sets of words to choose from
+     // make some sets of words to choose from
+	    String[] prephraseList0 = {"Wouldn't it be dreamy if we had", "I'm thinking of", "We need", "Let's work up", "I think it's time to try"};
         String[] wordListOne = {"skin-deep", "24/7",  "pervasive" ,"occasionally available", "globally-scraped", "hybrid", "fructitious"};
         String[] wordListTwo = {"sticky", "creepy",  "clustered", "flustered", "conversational", "fractal", "smyrckled"};
         String[] wordListThree = {"tripping-point", "solution", "fission", "surface", "topology", "borogroves"};
 
-       // String listFolderPath = "C:\\\\Users\\\\charles\\\\Documents\\\\workspace-spring-tool-suite-4-4.1.2.RELEASE\\\\KathyServlet\\\\WebContent\\\\WEB-INF\\\\classes\\\\";
-
+        List<String> prephraseList  = new ArrayList<String>();
         List<String> wordList1  = new ArrayList<String>();
         List<String> wordList2  = new ArrayList<String>();
         List<String> wordList3  = new ArrayList<String>();
+
+        try {
+        	InputStream instrm_0 = Thread.currentThread().getContextClassLoader().getResourceAsStream("prephraselist.txt");
+	        Scanner scan_0 = new Scanner(instrm_0).useDelimiter(",");
+
+	        while(scan_0.hasNext() )
+	        {
+	        	prephraseList.add(scan_0.next());
+	        }
+	        scan_0.close();
+        }
+        catch(NullPointerException ex) {
+            System.out.println("Caught nullptr excptn getting instream.");
+        }        
 
         try {
         	InputStream instrm_1 = Thread.currentThread().getContextClassLoader().getResourceAsStream("wordlist1.txt");
@@ -70,6 +84,10 @@ public class PhraseOMatic_Mark4 {
         }
 
 		// find out how many words are in each list
+		int zedLength = prephraseList.size();
+		prephraseList = zedLength < 1 ?  Arrays.asList(prephraseList0): prephraseList;
+		zedLength = prephraseList.size();
+		
 		int oneLength = wordList1.size();
 		wordList1 = oneLength < 1 ?  Arrays.asList(wordListOne): wordList1;
 		oneLength = wordList1.size();
@@ -87,6 +105,7 @@ public class PhraseOMatic_Mark4 {
 
 
 		// generate three random numbers, to pull random words from each list
+		int rand0 = (int) (Math.random() * zedLength);
 		int rand1 = (int) (Math.random() * oneLength);
 		int rand2 = (int) (Math.random() * twoLength);
 		int rand3 = (int) (Math.random() * threeLength);
@@ -97,10 +116,11 @@ public class PhraseOMatic_Mark4 {
 
 
 		// now make a phrase, bubba
-
+ 		
+ 		String prephrase = prephraseList.get(rand0).trim().replaceAll("^\"|\"$", "");
 		String phrase = wordList1.get(rand1).trim().replaceAll("^\"|\"$", "") + " " + wordList2.get(rand2).trim().replaceAll("^\"|\"$", "") + " " + wordList3.get(rand3).trim().replaceAll("^\"|\"$", "") + "." ;
 	//	String string = phrase.replaceAll("^\"|\"$", "");  to strip quotes, thanx BalusC on Stack-Ovrflow
-		return ("What we need is a " + phrase);
+		return (prephrase + " a " + phrase);
 
 	}
   }

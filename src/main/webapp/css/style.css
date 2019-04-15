@@ -17,11 +17,11 @@ body {
   background-color: currentColor; 
 }
 h1 {
-  font-size: calc(1em + 3vw);
+  font-size: calc(0.8em + 3vw);
 }
 h1 {
   text-align: center;
-  color: #ffffff;
+  color: #778877;
 }
 h2 {
   color: #bbbbcc;

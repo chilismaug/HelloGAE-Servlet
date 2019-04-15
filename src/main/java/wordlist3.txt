@@ -1,3 +1,3 @@
-"cloud", "process", "tipping-point", "solution", "architecture", "core competency",
+"cloud", "process", "tipping-point", "solution", "architecture", "core competency", "metric", "endpoint",
 "strategy", "mindshare", "portal", "space", "vision", "paradigm", "contract", "mission", "front-end",
-"array", "pivot", "orchestration", "zone", "surface", "topology"
+"array", "pivot", "orchestration", "zone", "surface", "topology", "thought leader", "boss", "pitch", "indicator", "separation of concerns"

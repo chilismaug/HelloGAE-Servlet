@@ -20,7 +20,7 @@ public class HelloAppEngine extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
 	PrintWriter out;
-	String title = "His master's voice...";
+	String title = "What does the PhraseOmatic say...";
 	response.setContentType("text/html");
     response.setCharacterEncoding("UTF-8");
 	out = response.getWriter();

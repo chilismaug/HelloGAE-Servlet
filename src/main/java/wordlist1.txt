@@ -1,1 +1,3 @@
-"24/7", "multi-tier", "30000 foot", "b-to-b", "cross-cutting", "win-win",  "pervasive", "smart", "six-sigma", "private", "massively parallel","dynamic", "networked", "focused", "leveraged", "targeted", "highly available", "full-stack",, "shared", "cooperative",  "lean", "passionate", "globally-scoped", "hybrid"
+"serverless", "networked", "focused", "leveraged", "targeted", "highly available", "pervasive" ,"transiently available", "globally-scraped", "hybrid", 
+"24/7", "multi-tier", "30000 foot", "b-to-b", "cross-cutting", "win-win",  "pervasive", "smart", "5 nines", "private", "massively parallel","dynamic", 
+"full-stack","fully scalable", "shared", "cooperative",  "lean", "passionate", "globally-scoped", "hybrid", "cold lamping", "chair dancing", "key","shift-left"

@@ -1,3 +1,3 @@
-"native", "empowered", "woke", "single-page", "sticky", "value-added", "phased", "aspect-oriented", "six-sigma-based", "rockstar",
-"aligned", "scalable", "social", "excited", "offline", "distributed", "clustered", "branded", "fault-tolerant",
-"outside-the-box", "positioned", "critical-path", "accelerated","digital", "innovation", "containerized", "conversational"
+"native", "empowered", "woke", "single-page", "sticky", "value-added", "phased", "aspect-oriented", "six-sigma", "rockstar",
+"aligned", "social", "excited", "offline", "distributed", "clustered", "branded", "fault-tolerant", "lights-out", 
+"outside-the-lines", "positioned", "critical-path", "accelerated","digital", "innovation", "containerized", "conversational", "manage-up"

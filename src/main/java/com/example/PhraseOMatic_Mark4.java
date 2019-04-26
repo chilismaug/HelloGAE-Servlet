@@ -1,16 +1,11 @@
 package com.example;
 
-import static org.hamcrest.CoreMatchers.hasItems;
-
-import java.io.*;
-import java.io.FileReader;
+import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 
 public class PhraseOMatic_Mark4 {
